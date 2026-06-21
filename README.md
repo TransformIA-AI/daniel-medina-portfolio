@@ -1,52 +1,96 @@
-# Daniel Medina Sánchez — Professional Portfolio
+# Daniel Medina Sánchez Portfolio
 
-**AI Transformation & Digital Operations Leader**  
-Digital Workplace · Public Sector · ITSM · Human-in-the-Loop · CS50x + CS50AI  
-Madrid, España
+Professional portfolio for **Daniel Medina Sánchez**:
 
----
+AI Transformation, Digital Workplace, Operations Transformation and Human-in-the-Loop proof-of-work.
 
-## Status
+Final repository:
 
-🚧 **v0.1 — Handoff scaffold.** Repository prepared for Codex migration of Figma Tier-S prototype to Next.js.
-
-See [`/docs/CODEX_HANDOFF.md`](./docs/CODEX_HANDOFF.md) for full build instructions.
-
----
-
-## Tech Stack (target)
-
-- **Framework:** Next.js App Router (TypeScript)
-- **Styling:** Tailwind CSS
-- **Content:** MDX case studies
-- **Hosting:** Vercel
-- **CV downloads:** `/public/cv/`
-
----
-
-## Repository Structure
-
-```
-/figma-source        ← Figma Make Tier-S bundle (reference only)
-/public/cv           ← CV PDFs (ES, EN, EN no-photo)
-/public/assets       ← LinkedIn, OG and Figma export assets
-/docs                ← Codex handoff, public-safe boundary, content inventory, deployment notes
-/content/cases       ← Case study stubs (MD → MDX in Codex phase)
+```txt
+https://github.com/TransformIA-AI/daniel-medina-portfolio
 ```
 
----
+## Stack
 
-## Pending Items (add manually)
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- React
+- lucide-react icons
+- Static public CV downloads
+- Vercel-ready metadata, sitemap and robots routes
 
-| Item | Path | Action |
-|---|---|---|
-| Figma Tier-S ZIP | `/figma-source/figma-tier-s-source.zip` | Download from Figma Make → Export code |
-| CV ES | `/public/cv/Daniel_Medina_Sanchez_CV_ES.pdf` | Upload file |
-| CV EN | `/public/cv/Daniel_Medina_Sanchez_CV_EN.pdf` | Upload file |
-| CV EN no-photo | `/public/cv/Daniel_Medina_Sanchez_CV_EN_No_photo.pdf` | Upload file |
+## Install
 
----
+```bash
+npm install
+```
 
-## License
+## Development
 
-MIT — portfolio scaffold only. Content and CVs are © Daniel Medina Sánchez.
+```bash
+npm run dev
+```
+
+Default local URL:
+
+```txt
+http://localhost:3000
+```
+
+## Validation
+
+```bash
+npm run lint
+npm run build
+```
+
+## Public Asset Routes
+
+CV PDFs are served from `public/cv/`:
+
+```txt
+/cv/daniel-medina-sanchez-cv-es.pdf
+/cv/daniel-medina-sanchez-cv-en.pdf
+/cv/daniel-medina-sanchez-cv-en-no-photo.pdf
+```
+
+The Figma Tier-S prototype source is retained as build reference only:
+
+```txt
+figma-source/Tier-S.zip
+```
+
+Handoff and boundary documents remain in `docs/` and are not exposed as public UI content.
+
+## Structure
+
+```txt
+app/           Next.js routes, metadata, sitemap and robots
+components/    Reusable UI sections and interactive recruiter demo
+content/       Public-safe portfolio content and existing case stubs
+lib/           Constants and case helpers
+public/        Public static assets, including CV PDFs
+docs/          Handoff, deployment and public-safe notes
+figma-source/  Tier-S visual source bundle
+```
+
+## Public-Safe Boundary
+
+The public website must not expose:
+
+- private TransformIA source code;
+- customer data;
+- API keys, credentials or secrets;
+- private emails or internal documents;
+- legal or litigation-sensitive material;
+- full CS50 assessment solutions;
+- unsupported ROI or compliance certification claims;
+- autonomous recruitment, email or calendar actions.
+
+## Next Steps
+
+1. Add a production `NEXT_PUBLIC_SITE_URL` value in Vercel.
+2. Add a real OpenGraph image under `public/og/` and reference it in metadata.
+3. Run a browser/Lighthouse QA pass after deployment.
+4. Decide whether to add an optional contact API route or keep contact as mail/LinkedIn only.
