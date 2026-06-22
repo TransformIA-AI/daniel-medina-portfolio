@@ -7,12 +7,9 @@ import {
   CheckCircle2,
   Cpu,
   GraduationCap,
-  Layers3,
-  ShieldCheck,
-  Workflow
+  Layers3
 } from "lucide-react";
 
-import { CaseCard } from "@/components/case-card";
 import { CVDownloadButtons } from "@/components/cv-download-buttons";
 import { RecruiterConcierge } from "@/components/recruiter-concierge";
 import { SectionHeading } from "@/components/section-heading";
@@ -26,18 +23,19 @@ type LocalizedSectionProps = {
 };
 
 export function ValueAreasSection({ dictionary }: LocalizedSectionProps) {
-  const icons = [Cpu, Layers3, BriefcaseBusiness, Workflow];
+  const icons = [BriefcaseBusiness, Layers3, Cpu];
   const content = dictionary.valueAreas;
 
   return (
-    <section className="bg-mist py-20" id="positioning">
+    <section className="bg-mist py-20" id="work">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <SectionHeading
+          align="center"
           eyebrow={content.eyebrow}
           title={content.title}
           body={content.body}
         />
-        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
           {content.items.map((area, index) => {
             const Icon = icons[index];
             return (
@@ -63,35 +61,125 @@ export function ValueAreasSection({ dictionary }: LocalizedSectionProps) {
   );
 }
 
-export function ProofOfWorkSection({ dictionary, locale }: LocalizedSectionProps) {
+function EditorialCard({
+  body,
+  category,
+  cta,
+  footer,
+  href,
+  tags,
+  title
+}: {
+  body: string;
+  category?: string;
+  cta?: string;
+  footer: string;
+  href: string;
+  tags: readonly string[];
+  title: string;
+}) {
   return (
-    <section className="bg-paper py-20" id="work">
-      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <SectionHeading
-            eyebrow={dictionary.proof.eyebrow}
-            title={dictionary.proof.title}
-            body={dictionary.proof.body}
-          />
-          <Link
-            className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-line bg-white px-4 text-sm font-semibold text-ink transition hover:border-teal hover:text-teal"
-            href={`/${locale}/assets`}
-          >
-            {dictionary.proof.assetsCta}
+    <Link
+      className="focus-ring group flex h-full flex-col rounded-lg border border-line bg-white p-6 shadow-card transition hover:-translate-y-1 hover:border-teal hover:shadow-soft"
+      href={href}
+    >
+      {category ? (
+        <p className="text-xs font-bold uppercase tracking-[0.16em] text-teal">{category}</p>
+      ) : null}
+      <h3 className="mt-4 text-xl font-bold tracking-tight text-ink">{title}</h3>
+      <p className="mt-3 text-sm leading-6 text-slate">{body}</p>
+      <div className="mt-5 flex flex-wrap gap-2">
+        {tags.map((tag) => (
+          <span className="rounded bg-mist px-2.5 py-1 text-xs font-medium text-slate" key={tag}>
+            {tag}
+          </span>
+        ))}
+      </div>
+      <div className="mt-auto border-t border-line pt-5">
+        <p className="text-sm font-semibold text-ink">{footer}</p>
+        {cta ? (
+          <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-teal">
+            {cta}
             <ArrowRight aria-hidden="true" size={15} />
-          </Link>
-        </div>
+          </p>
+        ) : null}
+      </div>
+    </Link>
+  );
+}
+
+export function ExperienceSection({ dictionary, locale }: LocalizedSectionProps) {
+  const content = dictionary.proof;
+
+  return (
+    <section className="bg-paper py-20" id="experience">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <SectionHeading
+          align="center"
+          eyebrow={content.eyebrow}
+          title={content.title}
+          body={content.body}
+        />
         <div className="mt-10 grid gap-5 md:grid-cols-2">
-          {dictionary.cases.map((caseStudy) => (
-            <CaseCard caseStudy={caseStudy} key={caseStudy.slug} locale={locale} />
+          {content.professionalCards.map((card) => (
+            <EditorialCard
+              body={card.body}
+              category={card.category}
+              cta={card.cta}
+              footer={card.footer}
+              href={`/${locale}/case/${card.slug}`}
+              key={card.slug}
+              tags={card.tags}
+              title={card.title}
+            />
           ))}
         </div>
+
       </div>
     </section>
   );
 }
 
-export function LabSection({ dictionary }: LocalizedSectionProps) {
+export function FeaturedCasesSection({ dictionary, locale }: LocalizedSectionProps) {
+  return (
+    <section className="bg-white py-20">
+      <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-6 lg:px-8">
+        {dictionary.featuredCases.map((caseBlock) => (
+          <article
+            className="grid gap-8 rounded-lg border border-line bg-paper p-6 shadow-card lg:grid-cols-[1.05fr_0.95fr] lg:p-8"
+            key={caseBlock.slug}
+          >
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-teal">{caseBlock.eyebrow}</p>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">{caseBlock.title}</h2>
+              <div className="mt-5 space-y-4 text-base leading-7 text-slate">
+                {caseBlock.body.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+              <Link
+                className="focus-ring mt-7 inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-ink px-4 text-sm font-semibold text-white transition hover:bg-carbon"
+                href={`/${locale}/case/${caseBlock.slug}`}
+              >
+                {caseBlock.cta}
+                <ArrowRight aria-hidden="true" size={15} />
+              </Link>
+            </div>
+            <div className="grid content-start gap-3">
+              {caseBlock.highlights.map((highlight) => (
+                <div className="rounded-md border border-line bg-white px-4 py-3 text-sm font-semibold leading-6 text-ink" key={highlight}>
+                  {highlight}
+                </div>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export function LabSection({ dictionary, locale }: LocalizedSectionProps) {
   const content = dictionary.lab;
 
   return (
@@ -102,42 +190,33 @@ export function LabSection({ dictionary }: LocalizedSectionProps) {
           <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
             {content.title}
           </h2>
-          <p className="mt-5 text-base leading-7 text-white/70">
+          <p className="mt-5 whitespace-pre-line text-base leading-7 text-white/70">
             {content.body}
           </p>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2">
-            {content.boundaries.map((boundary) => (
-              <div className="flex items-start gap-2 text-sm text-white/75" key={boundary}>
-                <ShieldCheck aria-hidden="true" className="mt-0.5 text-teal" size={16} />
-                {boundary}
-              </div>
-            ))}
-          </div>
+          <Link
+            className="focus-ring mt-8 inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-white/20 px-4 text-sm font-semibold text-white transition hover:border-teal hover:text-teal"
+            href={`/${locale}/case/${content.slug}`}
+          >
+            {content.cta}
+            <ArrowRight aria-hidden="true" size={15} />
+          </Link>
         </div>
 
-        <div className="rounded-lg border border-white/10 bg-white/[0.04] p-5 shadow-soft">
-          <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/45">{content.cockpitEyebrow}</p>
-              <p className="mt-1 text-sm font-semibold text-white">{content.cockpitTitle}</p>
-            </div>
-            <span className="rounded-full bg-teal/20 px-3 py-1 text-xs font-semibold text-teal">{content.demoOnly}</span>
-          </div>
-          <div className="mt-5 grid gap-3">
-            {content.flow.map((step, index) => (
-              <div className="grid grid-cols-[2.5rem_1fr] gap-4 rounded-md bg-white/[0.06] p-4" key={step}>
-                <div className="flex h-9 w-9 items-center justify-center rounded-md bg-teal text-sm font-black">
-                  {index + 1}
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-white">{step}</p>
-                  <p className="mt-1 text-xs leading-5 text-white/55">
-                    {content.flowBody}
-                  </p>
-                </div>
+        <div className="grid gap-3">
+          <p className="text-sm font-bold text-white">{content.methodTitle}</p>
+          {content.method.map((step, index) => (
+            <div className="grid grid-cols-[2.5rem_1fr] gap-4 rounded-md border border-white/10 bg-white/[0.06] p-4" key={step.title}>
+              <div className="flex h-9 w-9 items-center justify-center rounded-md bg-teal text-sm font-black">
+                {index + 1}
               </div>
-            ))}
-          </div>
+              <div>
+                <p className="text-sm font-semibold text-white">{step.title}</p>
+                <p className="mt-1 text-xs leading-5 text-white/55">
+                  {step.body}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -172,6 +251,7 @@ export function CredentialsSection({ dictionary }: LocalizedSectionProps) {
     <section className="border-y border-line bg-white py-20" id="credentials">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <SectionHeading
+          align="center"
           eyebrow={content.eyebrow}
           title={content.title}
           body={content.body}

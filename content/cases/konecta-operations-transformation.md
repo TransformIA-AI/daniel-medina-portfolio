@@ -8,9 +8,9 @@ Large-scale insurance, CX and contact center operations across Spain, Portugal a
 
 Business Manager / General Service Lead.
 
-## Public-safe Scope
+## Public Scope
 
-This case uses only public-safe career-level information: scale, service types, leadership scope and operational responsibilities.
+This case uses only public career-level information: scale, service types, leadership scope and operational responsibilities.
 
 ## What This Demonstrates
 

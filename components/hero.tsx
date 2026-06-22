@@ -106,7 +106,7 @@ export function Hero({ dictionary, locale }: { dictionary: PortfolioDictionary; 
             {hero.headline}
           </p>
 
-          <p className="mt-6 text-base leading-8 text-slate sm:text-lg">{hero.body}</p>
+          <p className="mt-6 whitespace-pre-line text-base leading-8 text-slate sm:text-lg">{hero.body}</p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a

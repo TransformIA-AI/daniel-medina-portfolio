@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 
 import {
   CVHubSection,
-  ConciergeSection,
   ContactSection,
   CredentialsSection,
+  ExperienceSection,
+  FeaturedCasesSection,
   LabSection,
   OperationsSection,
-  ProofOfWorkSection,
   ValueAreasSection
 } from "@/components/home-sections";
 import { Hero } from "@/components/hero";
@@ -39,9 +39,9 @@ export default async function LocalizedHomePage({ params }: HomePageProps) {
     <>
       <Hero dictionary={dictionary} locale={locale} />
       <ValueAreasSection dictionary={dictionary} locale={locale} />
-      <ProofOfWorkSection dictionary={dictionary} locale={locale} />
+      <ExperienceSection dictionary={dictionary} locale={locale} />
+      <FeaturedCasesSection dictionary={dictionary} locale={locale} />
       <LabSection dictionary={dictionary} locale={locale} />
-      <ConciergeSection dictionary={dictionary} locale={locale} />
       <CredentialsSection dictionary={dictionary} locale={locale} />
       <OperationsSection dictionary={dictionary} locale={locale} />
       <CVHubSection dictionary={dictionary} locale={locale} />

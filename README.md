@@ -2,7 +2,7 @@
 
 Professional portfolio for **Daniel Medina Sánchez**:
 
-AI Transformation, Digital Workplace, Operations Transformation and Human-in-the-Loop proof-of-work.
+AI Transformation, Digital Workplace, Operations Transformation and human-reviewed case studies.
 
 Final repository:
 
@@ -67,15 +67,15 @@ Handoff and boundary documents remain in `docs/` and are not exposed as public U
 
 ```txt
 app/           Next.js routes, metadata, sitemap and robots
-components/    Reusable UI sections and interactive recruiter demo
-content/       Public-safe portfolio content and existing case stubs
+components/    Reusable UI sections and bilingual home blocks
+content/       Portfolio content, bilingual copy and case studies
 lib/           Constants and case helpers
 public/        Public static assets, including CV PDFs
-docs/          Handoff, deployment and public-safe notes
+docs/          Handoff, deployment and content boundary notes
 figma-source/  Tier-S visual source bundle
 ```
 
-## Public-Safe Boundary
+## Public Content Boundary
 
 The public website must not expose:
 

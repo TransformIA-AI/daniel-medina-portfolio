@@ -15,6 +15,10 @@ type CasePageProps = {
   }>;
 };
 
+function getSectionParagraphs(body: string | readonly string[]) {
+  return Array.isArray(body) ? body : [body];
+}
+
 export function generateStaticParams() {
   return getLocalizedCaseParams();
 }
@@ -64,7 +68,7 @@ export default async function CaseStudyPage({ params }: CasePageProps) {
         <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-8">
           <Link
             className="focus-ring inline-flex items-center gap-2 rounded-sm text-sm font-semibold text-slate transition hover:text-teal"
-            href={`/${locale}/#work`}
+            href={`/${locale}/#experience`}
           >
             <ArrowLeft aria-hidden="true" size={16} />
             {dictionary.casePage.back}
@@ -83,8 +87,29 @@ export default async function CaseStudyPage({ params }: CasePageProps) {
       </section>
 
       <section className="py-14">
-        <div className="mx-auto grid max-w-5xl gap-8 px-5 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8">
-          <aside className="space-y-5">
+        <div className="mx-auto grid max-w-5xl gap-8 px-5 sm:px-6 lg:grid-cols-[minmax(0,1.25fr)_minmax(18rem,0.75fr)] lg:px-8">
+          <div className="space-y-8">
+            {caseStudy.sections.map((section) => (
+              <section className="rounded-lg border border-line bg-white p-6 shadow-card" key={section.title}>
+                <h2 className="text-xl font-bold text-ink">{section.title}</h2>
+                <div className="mt-4 space-y-4 text-base leading-8 text-slate">
+                  {getSectionParagraphs(section.body).map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+              </section>
+            ))}
+
+            <section className="rounded-lg border border-line bg-white p-6 shadow-card">
+              <h2 className="text-xl font-bold text-ink">{dictionary.casePage.nextStep}</h2>
+              <p className="mt-4 text-base leading-8 text-slate">{dictionary.casePage.nextStepBody}</p>
+              <div className="mt-6">
+                <CVDownloadButtons compact files={dictionary.cvHub.files} />
+              </div>
+            </section>
+          </div>
+
+          <aside className="self-start space-y-5 lg:sticky lg:top-28">
             <div className="rounded-lg border border-line bg-white p-6 shadow-card">
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate">{dictionary.casePage.role}</p>
               <p className="mt-3 text-sm font-semibold leading-6 text-ink">{caseStudy.role}</p>
@@ -100,35 +125,17 @@ export default async function CaseStudyPage({ params }: CasePageProps) {
               </div>
               <p className="mt-3 text-sm leading-6 text-teal">{caseStudy.publicSafeNote}</p>
             </div>
-          </aside>
-
-          <div className="space-y-8">
             <section className="rounded-lg border border-line bg-white p-6 shadow-card">
               <h2 className="text-xl font-bold text-ink">{dictionary.casePage.evidence}</h2>
-              <ul className="mt-5 space-y-3">
+              <ul className="mt-5 flex flex-wrap gap-2">
                 {caseStudy.proof.map((item) => (
-                  <li className="rounded-md bg-mist px-4 py-3 text-sm font-medium text-slate" key={item}>
+                  <li className="rounded-md bg-mist px-3 py-2 text-xs font-semibold leading-5 text-slate" key={item}>
                     {item}
                   </li>
                 ))}
               </ul>
             </section>
-
-            {caseStudy.sections.map((section) => (
-              <section className="rounded-lg border border-line bg-white p-6 shadow-card" key={section.title}>
-                <h2 className="text-xl font-bold text-ink">{section.title}</h2>
-                <p className="mt-4 text-base leading-8 text-slate">{section.body}</p>
-              </section>
-            ))}
-
-            <section className="rounded-lg border border-line bg-white p-6 shadow-card">
-              <h2 className="text-xl font-bold text-ink">{dictionary.casePage.nextStep}</h2>
-              <p className="mt-4 text-base leading-8 text-slate">{dictionary.casePage.nextStepBody}</p>
-              <div className="mt-6">
-                <CVDownloadButtons compact files={dictionary.cvHub.files} />
-              </div>
-            </section>
-          </div>
+          </aside>
         </div>
       </section>
     </article>
