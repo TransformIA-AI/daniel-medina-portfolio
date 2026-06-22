@@ -158,7 +158,7 @@ export const portfolioContent = {
           category: "CONSULTORÍA TECNOLÓGICA / SECTOR PÚBLICO",
           title: "Ayesa: consultoría tecnológica, Digital Workplace y proyectos institucionales",
           body:
-            "En Ayesa di un salto hacia consultoría tecnológica y proyectos de transformación. Trabajé en entornos vinculados a Madrid Digital / Comunidad de Madrid, Justicia, UOC e ICEX, con foco en documentación ejecutiva, coordinación, puesto de trabajo digital, ITSM, Project Management y uso intensivo de IA para producir mejor y más rápido.",
+            "En Ayesa he dado el salto hacia consultoría tecnológica y proyectos de transformación. Trabajo en entornos vinculados a Madrid Digital / Comunidad de Madrid, ámbito Justicia, UOC e ICEX, con foco en documentación ejecutiva, coordinación, puesto de trabajo digital, ITSM, Project Management y uso intensivo de IA para producir mejor y más rápido.",
           tags: ["Digital Workplace", "ITSM", "Sector público", "Documentación", "Project Management"],
           footer: "Madrid Digital / Justicia · UOC · ICEX · coordinación de equipos y delivery",
           cta: "Ver etapa completa"
@@ -193,9 +193,9 @@ export const portfolioContent = {
         eyebrow: "CASO DESTACADO / CONSULTORÍA TECNOLÓGICA",
         title: "Ayesa: el salto a transformación, sector público y delivery tecnológico",
         body: [
-          "Ayesa fue una etapa especialmente intensa porque cambió el tipo de presión. Venía de operaciones masivas, donde el reto es mantener vivo el servicio cada día. En Ayesa entré en una capa distinta: proyectos de modernización, documentación ejecutiva, Digital Workplace, ITSM, sector público y coordinación de equipos.",
-          "Trabajé en proyectos vinculados a Madrid Digital / Comunidad de Madrid, incluyendo ámbito de Justicia; después participé en un proyecto privado de la UOC; y posteriormente en ICEX, donde mi función se acercó mucho más a Project Management, coordinando a más de 30 personas y ayudando a ordenar trabajo, entregables y seguimiento.",
-          "En esta etapa la IA fue una ventaja real de productividad y calidad. La utilicé como multiplicador de análisis, síntesis, documentación ejecutiva, presentaciones, propuestas y materiales de seguimiento. No como sustituto del criterio, sino como una capa de trabajo asistido siempre revisada y dirigida por mí."
+          "Ayesa representa mi etapa actual de consultoría tecnológica y transformación. Vengo de operaciones masivas, donde el reto es mantener vivo el servicio cada día. En Ayesa trabajo en una capa distinta: proyectos de modernización, documentación ejecutiva, Digital Workplace, ITSM, sector público y coordinación de equipos.",
+          "He trabajado en proyectos vinculados a Madrid Digital / Comunidad de Madrid, incluyendo ámbito de Justicia; también he participado en un proyecto privado de la UOC; y en ICEX mi función se ha acercado mucho más a Project Management, coordinando a más de 30 personas y ayudando a ordenar trabajo, entregables y seguimiento.",
+          "En esta etapa la IA es una ventaja real de productividad y calidad. La utilizo como multiplicador de análisis, síntesis, documentación ejecutiva, presentaciones, propuestas y materiales de seguimiento. No como sustituto del criterio, sino como una capa de trabajo asistido siempre revisada y dirigida por mí."
         ],
         highlights: [
           "Madrid Digital / Comunidad de Madrid",
@@ -433,7 +433,7 @@ export const portfolioContent = {
         },
         publicSector: {
           content:
-            "Daniel tiene contexto de Digital Workplace, ITSM y sector público por su etapa en Ayesa, con trabajo vinculado a Madrid Digital, Justicia, UOC e ICEX.",
+            "Daniel tiene contexto de Digital Workplace, ITSM y sector público por su etapa actual en Ayesa, con trabajo vinculado a Madrid Digital, Justicia, UOC e ICEX.",
           confidence: "medium",
           fitScore: 82,
           cvHref: cvRoutes.es,
@@ -593,7 +593,7 @@ export const portfolioContent = {
         role: "Consultoría, Project Management y coordinación de delivery",
         sector: "Madrid Digital, Justicia, UOC, ICEX, Digital Workplace e ITSM",
         summary:
-          "Madrid Digital, Justicia, UOC, ICEX, coordinación de equipos y uso intensivo de IA para entregables de alto nivel.",
+          "Consultoría tecnológica, Digital Workplace, ITSM, sector público, coordinación de equipos y uso intensivo de IA para entregables de alto nivel.",
         proof: [
           "Madrid Digital / Comunidad de Madrid",
           "Ámbito Justicia",
@@ -616,14 +616,14 @@ export const portfolioContent = {
           {
             title: "Historia",
             body: [
-              "Ayesa fue una etapa de alto valor profesional porque cambió el tipo de presión. Venía de operaciones a escala, donde el reto es mantener servicios vivos todos los días. En Ayesa entré en otra capa: consultoría tecnológica, modernización, sector público, Digital Workplace, documentación ejecutiva, coordinación de proyectos y delivery.",
-              "Trabajé en proyectos vinculados a Madrid Digital / Comunidad de Madrid, incluyendo ámbito de Justicia. Ese contexto exige precisión, orden, documentación, capacidad de síntesis y una forma de trabajar muy distinta a la operación diaria. No basta con moverse rápido; hay que entender bien el entorno, cuidar la trazabilidad y producir materiales que ayuden a avanzar.",
-              "También participé en un proyecto privado de la UOC / Universitat Oberta de Catalunya, dentro de un entorno universitario y digital donde la comprensión del usuario, los procesos y la coordinación son claves. Esta experiencia amplió mi mirada sobre cómo se articulan proyectos tecnológicos fuera del entorno puramente operativo.",
-              "Posteriormente trabajé en ICEX, donde mi función encajaba mucho más con Project Management y coordinación de proyecto. En ese contexto llegué a coordinar a más de 30 personas, ordenando trabajo, seguimiento, entregables y comunicación. Fue una etapa exigente, de alto nivel, donde la capacidad de estructurar información y mantener foco era fundamental.",
-              "El cambio respecto a Konecta fue claro. En operaciones, la presión viene del volumen, la productividad, el cliente y el margen. En consultoría tecnológica, la presión viene de la ambigüedad, la documentación, los stakeholders, los plazos, las dependencias y la necesidad de convertir información dispersa en entregables claros.",
-              "Durante esta etapa utilicé IA de forma intensiva para aumentar productividad y calidad: análisis, estructuración de información, preparación de presentaciones, propuestas, documentación, materiales ejecutivos y revisión de contenidos. No como sustituto del criterio, sino como amplificador de capacidad. La IA me permitió producir en horas materiales que antes habrían requerido mucho más tiempo, siempre con revisión y dirección humana.",
-              "Ayesa demuestra mi capacidad para moverme entre negocio, tecnología, administración, documentación y delivery. También explica por qué mi transición hacia IA aplicada no es teórica: la he utilizado ya como ventaja real para producir mejor en contextos profesionales exigentes.",
-              "Si Konecta demuestra mi base de ejecución operativa, Ayesa demuestra mi salto a consultoría tecnológica y transformación. La combinación de ambas etapas es precisamente lo que hace diferencial mi perfil: entiendo la operación, pero también sé traducirla a documentación, proyecto, adopción y tecnología."
+              "Ayesa representa mi etapa actual de consultoría tecnológica y transformación. Vengo de operaciones a escala, donde el reto es mantener servicios vivos todos los días. En Ayesa trabajo en otra capa: consultoría tecnológica, modernización, sector público, Digital Workplace, documentación ejecutiva, coordinación de proyectos y delivery.",
+              "Trabajo y he trabajado en proyectos vinculados a Madrid Digital / Comunidad de Madrid, incluyendo ámbito de Justicia. Ese contexto exige precisión, orden, documentación, capacidad de síntesis y una forma de trabajar muy distinta a la operación diaria. No basta con moverse rápido; hay que entender bien el entorno, cuidar la trazabilidad y producir materiales que ayuden a avanzar.",
+              "También he participado en un proyecto privado de la UOC / Universitat Oberta de Catalunya, dentro de un entorno universitario y digital donde la comprensión del usuario, los procesos y la coordinación son claves. Esta experiencia amplía mi mirada sobre cómo se articulan proyectos tecnológicos fuera del entorno puramente operativo.",
+              "En ICEX mi función se ha acercado mucho más a Project Management y coordinación de proyecto. En ese contexto he coordinado a más de 30 personas, ordenando trabajo, seguimiento, entregables y comunicación. Es una etapa exigente, de alto nivel, donde la capacidad de estructurar información y mantener foco es fundamental.",
+              "El cambio respecto a Konecta es claro. En operaciones, la presión viene del volumen, la productividad, el cliente y el margen. En consultoría tecnológica, la presión viene de la ambigüedad, la documentación, los stakeholders, los plazos, las dependencias y la necesidad de convertir información dispersa en entregables claros.",
+              "En esta etapa utilizo IA de forma intensiva para aumentar productividad y calidad: análisis, estructuración de información, preparación de presentaciones, propuestas, documentación, materiales ejecutivos y revisión de contenidos. No como sustituto del criterio, sino como amplificador de capacidad, siempre con revisión y dirección humana.",
+              "Ayesa demuestra mi capacidad para moverme entre negocio, tecnología, administración, documentación y delivery. También explica por qué mi transición hacia IA aplicada no es teórica: la utilizo como ventaja real para producir mejor en contextos profesionales exigentes.",
+              "Konecta demuestra mi base de ejecución operativa. Ayesa consolida mi salto a consultoría tecnológica y transformación. La combinación de ambas etapas es precisamente lo que hace diferencial mi perfil: entiendo la operación, pero también sé traducirla a documentación, proyecto, adopción y tecnología."
             ]
           }
         ]
@@ -861,9 +861,9 @@ export const portfolioContent = {
         eyebrow: "FEATURED CASE / TECHNOLOGY CONSULTING",
         title: "Ayesa: transformation, public sector and technology delivery",
         body: [
-          "Ayesa was a high-value stage because the type of pressure changed. Daniel came from large-scale operations and moved into technology consulting, modernization, executive documentation, Digital Workplace, ITSM, public-sector context and project coordination.",
-          "He worked on projects linked to Madrid Digital / Community of Madrid, including the Justice domain; then UOC / Universitat Oberta de Catalunya; and later ICEX, where his role moved closer to Project Management, coordinating more than 30 people and helping structure work, deliverables and follow-up.",
-          "AI became a real productivity and quality multiplier in this stage: analysis, synthesis, executive documentation, presentations, proposals and tracking materials produced faster through human-directed, human-reviewed work."
+          "Ayesa represents Daniel's current technology consulting and transformation stage. He comes from large-scale operations, where the challenge is keeping services running every day. At Ayesa, he works in a different layer: modernization projects, executive documentation, Digital Workplace, ITSM, public-sector context and project coordination.",
+          "He has worked on projects linked to Madrid Digital / Community of Madrid, including the Justice domain; UOC / Universitat Oberta de Catalunya; and ICEX, where his role moved closer to Project Management, coordinating more than 30 people and helping structure work, deliverables and follow-up.",
+          "In this stage, AI is a real productivity and quality multiplier: analysis, synthesis, executive documentation, presentations, proposals and tracking materials produced faster through human-directed, human-reviewed work."
         ],
         highlights: [
           "Madrid Digital / Community of Madrid",
@@ -1101,7 +1101,7 @@ export const portfolioContent = {
         },
         publicSector: {
           content:
-            "Daniel has Digital Workplace, ITSM and public-sector context from his Ayesa stage, including Madrid Digital / Community of Madrid, the Justice domain, UOC and ICEX. The work included executive documentation, stakeholder management, project coordination and delivery.",
+            "Daniel has Digital Workplace, ITSM and public-sector context from his current Ayesa stage, including Madrid Digital / Community of Madrid, the Justice domain, UOC and ICEX. The work includes executive documentation, stakeholder management, project coordination and delivery.",
           confidence: "medium",
           fitScore: 82,
           cvHref: cvRoutes.en,
@@ -1245,7 +1245,7 @@ export const portfolioContent = {
         role: "Consulting, Project Management and delivery coordination",
         sector: "Madrid Digital, Justice, UOC, ICEX, Digital Workplace and ITSM",
         summary:
-          "Madrid Digital, Justice, UOC, ICEX, team coordination and AI-enabled productivity for high-value deliverables.",
+          "Madrid Digital, Justice domain, UOC, ICEX, team coordination and AI-assisted production of stronger executive materials with greater speed and consistency.",
         proof: [
           "Madrid Digital / Community of Madrid",
           "Justice domain",
@@ -1268,14 +1268,14 @@ export const portfolioContent = {
           {
             title: "Story",
             body: [
-              "Ayesa was a high-value professional stage because the type of pressure changed. Daniel came from operations at scale, where the challenge is keeping services alive every day. At Ayesa, he moved into a different layer: technology consulting, modernization, public-sector context, Digital Workplace, executive documentation, project coordination and delivery.",
-              "He worked on projects linked to Madrid Digital / Community of Madrid, including the Justice domain. That context requires precision, order, documentation, synthesis and a different working rhythm from day-to-day operations. It is not enough to move fast; the environment requires traceability and materials that help decisions move forward.",
-              "He also participated in a private project for UOC / Universitat Oberta de Catalunya, within a university and digital context where user understanding, process reading and coordination are key. That experience expanded his view of how technology projects operate outside purely operational environments.",
-              "Later, at ICEX, his function moved much closer to Project Management and project coordination. In that context, he coordinated more than 30 people, structuring work, follow-up, deliverables and communication. It was a demanding, high-level stage where the ability to organize information and maintain focus was critical.",
-              "The change from Konecta was clear. In operations, pressure comes from volume, productivity, client expectations and margin. In technology consulting, pressure comes from ambiguity, documentation, stakeholders, deadlines, dependencies and the need to turn scattered information into clear deliverables.",
-              "During this stage, Daniel used AI intensively as a productivity and quality multiplier: analysis, synthesis, information structuring, presentation preparation, proposals, executive documentation, tracking materials and content review. It was not a substitute for judgment; it was human-directed, human-reviewed work.",
-              "Ayesa demonstrates his ability to move between business, technology, administration, documentation and delivery. It also explains why his transition into applied AI is not theoretical: he has already used it as a real advantage to produce better work in demanding professional contexts.",
-              "If Konecta proves his operational execution base, Ayesa proves the move into technology consulting and transformation. The combination is precisely what makes the profile distinctive: he understands operations, but he can also translate them into documentation, project structure, adoption and technology."
+              "Ayesa represents Daniel's current technology consulting and transformation stage. He comes from operations at scale, where the challenge is keeping services running every day. At Ayesa, he works in a different layer: technology consulting, modernization, public-sector context, Digital Workplace, executive documentation, project coordination and delivery.",
+              "He works and has worked on projects linked to Madrid Digital / Community of Madrid, including the Justice domain. That context requires precision, order, documentation, synthesis and a different working rhythm from day-to-day operations. It is not enough to move fast; the environment requires traceability and materials that help decisions move forward.",
+              "He has also participated in a private project for UOC / Universitat Oberta de Catalunya, within a university and digital context where user understanding, process reading and coordination are key. That experience expands his view of how technology projects operate outside purely operational environments.",
+              "At ICEX, his role has moved closer to Project Management and project coordination. In that context, he has coordinated more than 30 people, structuring work, follow-up, deliverables and communication. It is a demanding, high-level stage where the ability to organize information and maintain focus is critical.",
+              "The change from Konecta is clear. In operations, pressure comes from volume, productivity, client expectations and margin. In technology consulting, pressure comes from ambiguity, documentation, stakeholders, deadlines, dependencies and the need to turn scattered information into clear deliverables.",
+              "In this stage, Daniel uses AI intensively as a productivity and quality multiplier: analysis, synthesis, information structuring, presentation preparation, proposals, executive documentation, tracking materials and content review. It is not a substitute for judgment; it is human-directed, human-reviewed work.",
+              "This stage demonstrates his ability to move between business, technology, administration, documentation and delivery. It also explains why his transition into applied AI is not theoretical: he uses it as a real advantage to produce better work in demanding professional contexts.",
+              "Konecta proves Daniel's operational execution base. Ayesa consolidates the move into technology consulting and transformation. The combination is precisely what makes the profile distinctive: he understands operations, but he can also translate them into documentation, project structure, adoption and technology."
             ]
           }
         ]
