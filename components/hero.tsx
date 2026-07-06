@@ -7,6 +7,19 @@ import { type Locale } from "@/lib/i18n";
 
 const statIcons = [BriefcaseBusiness, Users, Globe2, TrendingUp, GraduationCap];
 
+const latestCertificationByLocale: Record<Locale, { label: string; title: string; detail: string }> = {
+  es: {
+    label: "Nuevo hito certificado",
+    title: "CertiProf SMPC®",
+    detail: "Scrum Master Professional Certification"
+  },
+  en: {
+    label: "New certified milestone",
+    title: "CertiProf SMPC®",
+    detail: "Scrum Master Professional Certification"
+  }
+};
+
 function FloatingMetric({
   value,
   label,
@@ -34,7 +47,9 @@ function FloatingMetric({
   );
 }
 
-function ProfileVisual({ hero }: { hero: PortfolioDictionary["hero"] }) {
+function ProfileVisual({ hero, locale }: { hero: PortfolioDictionary["hero"]; locale: Locale }) {
+  const latestCertification = latestCertificationByLocale[locale];
+
   return (
     <div className="relative mx-auto w-full max-w-[34rem]">
       <div className="surface-grid relative min-h-[28rem] overflow-hidden rounded-2xl border border-line bg-white/60 shadow-soft">
@@ -78,7 +93,7 @@ function ProfileVisual({ hero }: { hero: PortfolioDictionary["hero"] }) {
 
           <div className="flex items-center justify-center gap-2 rounded-lg border border-amber/30 bg-[#FFF8E7] px-4 py-3 text-xs font-bold text-[#7A5C00] shadow-card lg:absolute lg:bottom-3 lg:left-1/2 lg:-translate-x-1/2">
             <Award aria-hidden="true" size={15} />
-            {hero.profile.credential}
+            <span>{hero.profile.credential} + {latestCertification.title}</span>
           </div>
         </div>
       </div>
@@ -88,6 +103,7 @@ function ProfileVisual({ hero }: { hero: PortfolioDictionary["hero"] }) {
 
 export function Hero({ dictionary, locale }: { dictionary: PortfolioDictionary; locale: Locale }) {
   const hero = dictionary.hero;
+  const latestCertification = latestCertificationByLocale[locale];
 
   return (
     <section className="overflow-hidden border-b border-line bg-paper">
@@ -107,6 +123,17 @@ export function Hero({ dictionary, locale }: { dictionary: PortfolioDictionary; 
           </p>
 
           <p className="mt-6 whitespace-pre-line text-base leading-8 text-slate sm:text-lg">{hero.body}</p>
+
+          <div className="mt-6 rounded-lg border border-amber/30 bg-[#FFF8E7] p-4 text-sm text-[#5E4700] shadow-card">
+            <div className="flex items-start gap-3">
+              <Award aria-hidden="true" className="mt-0.5 shrink-0 text-amber" size={18} />
+              <div>
+                <p className="text-xs font-black uppercase tracking-[0.18em] text-[#7A5C00]">{latestCertification.label}</p>
+                <p className="mt-1 font-bold text-ink">{latestCertification.title}</p>
+                <p className="mt-1 leading-6">{latestCertification.detail}</p>
+              </div>
+            </div>
+          </div>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
@@ -140,11 +167,12 @@ export function Hero({ dictionary, locale }: { dictionary: PortfolioDictionary; 
                   {credential}
                 </span>
               ))}
+              <span className="text-sm font-semibold text-teal">{latestCertification.title}</span>
             </div>
           </div>
         </div>
 
-        <ProfileVisual hero={hero} />
+        <ProfileVisual hero={hero} locale={locale} />
       </div>
 
       <div className="bg-ink text-white">
