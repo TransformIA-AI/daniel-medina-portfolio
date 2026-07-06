@@ -12,15 +12,15 @@ export const siteConfig = {
 export const cvFiles = [
   {
     id: "es",
-    href: "/cv/daniel-medina-sanchez-cv-es.pdf"
+    href: "/generated-cv/daniel-medina-sanchez-cv-es.pdf"
   },
   {
     id: "en",
-    href: "/cv/daniel-medina-sanchez-cv-en.pdf"
+    href: "/generated-cv/daniel-medina-sanchez-cv-en.pdf"
   },
   {
     id: "enNoPhoto",
-    href: "/cv/daniel-medina-sanchez-cv-en-no-photo.pdf"
+    href: "/generated-cv/daniel-medina-sanchez-cv-en-no-photo.pdf"
   }
 ] as const;
 
